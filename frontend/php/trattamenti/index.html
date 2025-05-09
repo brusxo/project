@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Preventivo Trattamenti</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <link rel="stylesheet" href="./index.css"></link>
+  <style>
+  </style>
+</head>
+<body>
+
+<div id="areaPDF">
+  <div class="intestazione">
+    <img src="../../assets/logo.jpg" alt="Logo Studio Brusco">
+    <h2>Seleziona i trattamenti</h2>
+  </div>
+
+  <p><strong>Data:</strong> <span id="data-odierna"></span></p>
+  <p><strong>Nome paziente:</strong> <input type="text" id="nome-paziente" placeholder="Mario Rossi" style="padding:5px; border-radius:5px; width: 250px;"></p>
+
+  <form id="form-trattamenti">
+    <div id="contenitore-trattamenti"></div>
+
+    <div class="gruppo">
+      <h3>Altri Trattamenti</h3>
+      <div class="trattamento">
+        <input type="checkbox" data-prezzo="90" class="check" id="extra1">
+        <label for="extra1">Ablazione tartaro (90€)</label>
+        Quantità: <input type="number" value="1" min="1" class="quantita">
+        Denti: <input type="text" class="denti">
+      </div>
+      <div class="trattamento">
+        <input type="checkbox" data-prezzo="170" class="check" id="extra2">
+        <label for="extra2">Sbiancamento (170€)</label>
+        Quantità: <input type="number" value="1" min="1" class="quantita">
+        Denti: <input type="text" class="denti">
+      </div>
+    </div>
+
+    <div class="bottoni">
+      <button type="button" id="total-button">Calcola Totale</button>
+      <button type="button" id="save-pdf-button">Salva come PDF</button>
+      <a href="../home/index.html" class="btn-home">Torna alla Home</a>
+    </div>
+  </form>
+
+  <div class="scontrino" id="scontrino"></div>
+
+  <p style="margin-top:40px;"><strong>Firma paziente:</strong></p>
+  <div style="border-top: 1px solid #000; width: 300px; margin-top: 20px;"></div>
+</div>
+
+<script src="./index.js"></script>
+
+</body>
+</html>

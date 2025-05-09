@@ -1,0 +1,144 @@
+/* style2.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f8fb;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #005f73;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #0a9396;
+  border-bottom: 2px solid #94d2bd;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th, table td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+table th {
+  background-color: #e9f5f4;
+  color: #005f73;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.form-box {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="date"],
+input[type="time"],
+select,
+.flatpickr-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus,
+.flatpickr-input:focus {
+  border-color: #0a9396;
+  outline: none;
+  box-shadow: 0 0 5px rgba(10, 147, 150, 0.4);
+}
+
+button {
+  background-color: #0a9396;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007b7a;
+}
+
+.bottoni {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-home {
+  display: inline-block;
+  background-color: #ee9b00;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+  background-color: #ca6702;
+}
+
+/* Responsive base */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  table th, table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button, .btn-home {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}

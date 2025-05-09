@@ -1,0 +1,143 @@
+:root{
+  --margin-min: 0.5rem;
+  --margin-medium: 1rem;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f4f8fb;
+  color: #333;
+  
+}
+
+header {
+  background-color: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+header > h1 {
+  width: 0;
+  text-align: center;
+  overflow: hidden;             /* Nasconde il testo in eccesso */
+  white-space: nowrap;          /* Non andare a capo */
+  width: 0;
+  animation: typing 3s steps(26, end) forwards;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 22ch; } /* Numero di caratteri del titolo */
+}
+
+nav {
+  background-color: #005fa3;
+  display: flex;
+  gap: 15px;
+}
+
+nav > a {
+  padding: 0.5rem 1rem;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+nav > a:hover{
+  background-color: #1a74b5;
+}
+
+nav > a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+nav > a:hover::before {
+  width: 100%;
+}
+
+.container {
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: var(--margin-medium);
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #e3eefc;
+}
+
+input, textarea, select, button {
+  padding: 8px;
+  margin: 8px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button, input[type="submit"] {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #005fa3;
+}
+.btn-home {
+  background-color: #007acc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.btn-home:hover {
+  background-color: #005fa3;
+}
+
+.bottoni {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
